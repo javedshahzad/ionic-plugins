@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Barcode Scanner</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button (click)="scanBarcode()" expand="full" color="danger">Start scanning</ion-button>
+  <p class="title">Barcode Scanned Results:</p>
+  <p class="contents">{{scannedData.text}}</p>
+</ion-content>

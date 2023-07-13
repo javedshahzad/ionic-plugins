@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Email Composer</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">To</ion-label>
+    <ion-input  type="email" [(ngModel)]="toMail" name="toMail" placeholder="Enter email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Cc</ion-label>
+    <ion-input  type="email" [(ngModel)]="Ccmail" name="Ccmail" placeholder="Optional"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Subject</ion-label>
+    <ion-input  type="text" [(ngModel)]="subject" name="subject" placeholder="Enter Subject"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Body</ion-label>
+    <ion-textarea [(ngModel)]="body" placeholder="Enter more information here..."></ion-textarea>
+  </ion-item>
+  <ion-button (click)="sendMail()" color="danger" expand="full">Send</ion-button>
+</ion-content>

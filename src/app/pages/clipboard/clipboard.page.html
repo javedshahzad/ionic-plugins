@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Clipboard</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+	<h3>Clipboard Copy and Paste</h3>
+	<label for="txtCopy"> Add a string: </label>
+	<input type="text" id="txtCopy" name="txtCopy" [(ngModel)]= text1/>
+	<br/>
+	<ion-button (click)="doCopy()">Copy</ion-button>
+	<ion-button (click)="doPaste()">Paste</ion-button>
+	<ion-button (click)="doClear()">Clear</ion-button>
+	<p>Copied string is : {{text2}}</p>
+</ion-content>
+
